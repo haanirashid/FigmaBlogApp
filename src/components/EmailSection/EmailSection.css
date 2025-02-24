@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_email{
+    width: 100%;
+    height:450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+}
+
+.main_email .sub_email{
+    text-align: center;
+    width: 50%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+.sub_email h1{
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.sub_email input{
+    width: 35%;
+    height: 45px;
+    border-radius: 7px;
+    border: 2px solid var(--white);
+}
+.sub_email button{
+    width: 170px;
+    height: 45px;
+    margin-left: 15px;
+    background-color: var(--purple);
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-size: 14px;
+    border-top-left-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+}
+
+.sub_email p{
+    width: 80%;
+    font-size: 16px;
+    color: var(--black);
+}
+
+@media(max-width:1000px) and (min-width:880px){
+    .main_email .sub_email{
+        width: 70%;
+    }
+}
+@media(max-width:880px) and (min-width:660px){
+    .main_email .sub_email{
+        width: 85%;
+    }
+}
+@media(max-width:660px){
+    .main_email .sub_email{
+        width: 90%;
+        height: 350px;
+    }
+    .sub_email input{
+        width: 60%;
+    }
+
+    .sub_email button{
+        width: 250px;
+    }
+}
