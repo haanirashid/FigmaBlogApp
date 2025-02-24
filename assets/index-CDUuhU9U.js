@@ -67,7 +67,7 @@ Please change the parent <Route path="${X}"> to <Route path="${X==="/"?"*":`${X}
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
- */function ub(l){return j.createElement(E1,{flushSync:ib.flushSync,...l})}const rb="/images/logo-img.png";/*!
+ */function ub(l){return j.createElement(E1,{flushSync:ib.flushSync,...l})}const rb="/FigmaBlogApp/images/logo-img.png";/*!
  * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2024 Fonticons, Inc.
