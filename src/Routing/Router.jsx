@@ -1,6 +1,7 @@
 import {
   createBrowserRouter,
   RouterProvider,
+  useRouteError
 } from "react-router-dom";
 import HeroSection from "../components/HeroSection/HeroSection";
 import HeroSectionTwo from "../components/HeroSectionTwo/HeroSectionTwo";
@@ -12,23 +13,29 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 
 function Router() {
+
+  function CustomErrorComponent() {
+    const error = useRouteError();
+    console.error("Routing error:", error);
+    return <div>Something went wrong: {error.statusText || error.message}</div>;
+  }
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <> <Navbar /> <HeroSection /> <HeroSectionTwo /> <HeroSectionThree /> <CardsLineOne />  <CardsLineTwo /> <EmailSection /> <Footer /> </>
+      element: <> <Navbar /> <HeroSection /> <HeroSectionTwo /> <HeroSectionThree /> <CardsLineOne />  <CardsLineTwo /> <EmailSection /> <Footer /> </>,
+      errorElement: <CustomErrorComponent />
     },
     {
       path: "/blog",
-      element:<div>Blog Element</div>
+      element: <div>Blog Element</div>
     },
     {
       path: "/about",
       element: <div>About Element</div>
     }
   ],
-    {
-      base: "/FigmaBlogApp/"
-    }
+    { basename: "/FigmaBlogApp/" }
   )
   return (
     <>
