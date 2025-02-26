@@ -1,4 +1,5 @@
 import './HeroSection.css'
+import AiImg from '/images/ai-img.png'
 
 function HeroSection() {
     return (
@@ -14,7 +15,7 @@ function HeroSection() {
                     </div>
                 </div>
                 <div className="right">
-                    <img src='/images/ai-img.PNG' alt="error-hero" />
+                    <img src={AiImg} alt="error-hero" />
                 </div>
             </div>
         </>
