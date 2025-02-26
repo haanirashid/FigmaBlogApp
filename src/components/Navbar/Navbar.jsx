@@ -4,7 +4,7 @@ import logoImg from '/images/logo-img.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass, faBars } from "@fortawesome/free-solid-svg-icons"
 import './Navbar.css'
-function Navabar() {
+function Navbar() {
     var navList = useRef(null);
     function navMedia(){
       var stat =   navList.current.classList.toggle("active")
@@ -34,4 +34,4 @@ function Navabar() {
     )
 }
 
-export default Navabar
+export default Navbar
