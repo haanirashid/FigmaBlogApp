@@ -1,11 +1,9 @@
-import HeroSectionDivider from '../HeroSectionDivider/HeroSectionDivider'
 import ProductCard from '../ProductCard/ProductCard'
 import './CardsLineTwo.css'
 
 function CardsLineTwo() {
   return (
     <>
-    <HeroSectionDivider hOne ="Popular Post" />
     <div className="main_card_line_two">
         <div className="card_line_two">
           <ProductCard imgAddress='./images/card-four-img.png' hFour="travel" date="13 jan 2025" hOne="Train Or Bus? Journey Which One Suit" />

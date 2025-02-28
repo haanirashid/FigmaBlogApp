@@ -11,6 +11,8 @@ import CardsLineTwo from "../components/CardsLineTwo/CardsLineTwo";
 import EmailSection from "../components/EmailSection/EmailSection";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import BlogIntro from "../components/BlogIntro/BlogIntro";
+import HeroSectionDivider from "../components/HeroSectionDivider/HeroSectionDivider";
 
 function Router() {
 
@@ -20,19 +22,38 @@ function Router() {
     return <div>Something went wrong: {error.statusText || error.message}</div>;
   }
 
+
+  function Home() {
+    return (
+      <>
+        <Navbar /> <HeroSection /> <HeroSectionTwo /> <HeroSectionThree /> <CardsLineOne />  <HeroSectionDivider hOne ="Popular Post"/> <CardsLineTwo /> <EmailSection /> <Footer />
+      </>
+    )
+  }
+
+  function Blog() {
+    return (
+      <>
+        <Navbar /> <BlogIntro /> <CardsLineTwo /> <CardsLineOne /> <EmailSection /> <Footer />
+      </>
+    )
+  }
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <> <Navbar /> <HeroSection /> <HeroSectionTwo /> <HeroSectionThree /> <CardsLineOne />  <CardsLineTwo /> <EmailSection /> <Footer /> </>,
+      element: Home(),
       errorElement: <CustomErrorComponent />
     },
     {
       path: "/blog",
-      element: <div>Blog Element</div>
+      element: Blog(),
+      errorElement: <CustomErrorComponent />
     },
     {
       path: "/about",
-      element: <div>About Element</div>
+      element: <div>About Element</div>,
+      errorElement: <CustomErrorComponent />
     }
   ],
     { basename: "/FigmaBlogApp/" }

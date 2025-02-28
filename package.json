@@ -2,7 +2,7 @@
   "name": "blog-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://haanirashid.github.io/FigmaBlogApp",
+  "homepage": "http://haanirashid.github.io/FigmaBlogApp/",
   "type": "module",
   "scripts": {
     "dev": "vite",
