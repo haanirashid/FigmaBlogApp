@@ -13,6 +13,9 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import BlogIntro from "../components/BlogIntro/BlogIntro";
 import HeroSectionDivider from "../components/HeroSectionDivider/HeroSectionDivider";
+import CreateIntro from "../components/CreateIntro/CreateIntro";
+import BlogForm from "../components/BlogForm/BlogForm";
+import OurBlog from "../components/OurBlog/OurBlog";
 
 function Router() {
 
@@ -26,7 +29,7 @@ function Router() {
   function Home() {
     return (
       <>
-        <Navbar /> <HeroSection /> <HeroSectionTwo /> <HeroSectionThree /> <CardsLineOne />  <HeroSectionDivider hOne ="Popular Post"/> <CardsLineTwo /> <EmailSection /> <Footer />
+        <Navbar /> <HeroSection /> <HeroSectionTwo /> <HeroSectionThree /> <HeroSectionDivider hOne="Our Blogs"/> <OurBlog /> <CardsLineOne />  <HeroSectionDivider hOne ="Popular Post"/> <CardsLineTwo /> <EmailSection /> <Footer />
       </>
     )
   }
@@ -35,6 +38,14 @@ function Router() {
     return (
       <>
         <Navbar /> <BlogIntro /> <CardsLineTwo /> <CardsLineOne /> <EmailSection /> <Footer />
+      </>
+    )
+  }
+
+  function createBlog(){
+    return(
+      <>
+      <Navbar /> <CreateIntro /> <BlogForm /> <EmailSection /> <Footer />
       </>
     )
   }
@@ -53,6 +64,11 @@ function Router() {
     {
       path: "/about",
       element: <div>About Element</div>,
+      errorElement: <CustomErrorComponent />
+    },
+    {
+      path: "/createblog",
+      element: createBlog(),
       errorElement: <CustomErrorComponent />
     }
   ],

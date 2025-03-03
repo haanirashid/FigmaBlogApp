@@ -25,7 +25,7 @@ function Navbar() {
                         <li><NavLink to="/blog">Blog</NavLink> </li>
                         <li><NavLink to="/">About Us</NavLink> </li>
                         <li><FontAwesomeIcon icon={faMagnifyingGlass} /></li>
-                        <li><button>Contact Us</button></li>
+                        <li><button><NavLink to="/createblog">Create Blog</NavLink></button></li>
                     </ul>
                 </div>
                 <div className="icon">

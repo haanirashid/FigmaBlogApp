@@ -1,7 +1,8 @@
 import './HeroSectionDivider.css'
+import PropTypes from 'prop-types';
 
 function HeroSectionDivider(props) {
-const {hOne} = props;
+    const { hOne } = props;
     return (
         <>
             <div className="divider">
@@ -11,5 +12,7 @@ const {hOne} = props;
         </>
     )
 }
-
+HeroSectionDivider.propTypes = {
+    hOne: PropTypes.string
+};
 export default HeroSectionDivider
