@@ -9,8 +9,8 @@ function Navbar() {
     function navMedia() {
         var stat = navList.current.classList.toggle("active")
         console.log(stat);
-
     }
+    var loginStatus = window.localStorage.getItem("logStatus");
     return (
         <>
             <div className="nav">
@@ -25,7 +25,11 @@ function Navbar() {
                         <li><NavLink to="/blog">Blog</NavLink> </li>
                         <li><NavLink to="/">About Us</NavLink> </li>
                         <li><FontAwesomeIcon icon={faMagnifyingGlass} /></li>
-                        <li><button><NavLink to="/createblog">Create Blog</NavLink></button></li>
+                        {
+                            loginStatus === "0" ? <li><button><NavLink to="/Signin">Create Blog</NavLink></button></li> : 
+                            <li><button><NavLink to="/createblog">Create Blog</NavLink></button></li>
+                        }
+                        {/*  <li><button><NavLink to="/createblog">Create Blog</NavLink></button></li> */}
                     </ul>
                 </div>
                 <div className="icon">

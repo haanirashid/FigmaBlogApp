@@ -16,6 +16,8 @@ import HeroSectionDivider from "../components/HeroSectionDivider/HeroSectionDivi
 import CreateIntro from "../components/CreateIntro/CreateIntro";
 import BlogForm from "../components/BlogForm/BlogForm";
 import OurBlog from "../components/OurBlog/OurBlog";
+import Signin from "../components/Signin/Signin";
+import Login from "../components/Login/Login";
 
 function Router() {
 
@@ -64,6 +66,16 @@ function Router() {
     {
       path: "/about",
       element: <div>About Element</div>,
+      errorElement: <CustomErrorComponent />
+    },
+    {
+      path: "/signin",
+      element: <> <Signin /> </>,
+      errorElement: <CustomErrorComponent />
+    },
+    {
+      path: "/login",
+      element: <><Login /></>,
       errorElement: <CustomErrorComponent />
     },
     {
